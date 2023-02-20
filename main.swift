@@ -4,7 +4,7 @@
 import Foundation
 import Glibc
 print("Authored by: Yan Lu")
-print("")
+print("--------------------")
 //inform user of how the quadratic formula goes
 print("ax^2 + bx + c = 0 ")
 print("")
@@ -22,19 +22,18 @@ while true {
     let c = Double(readLine()!)!
     //get value of (b^2-4ac), and assign to delta.
     let delta = b * b - 4 * a * c
-    if delta > 0 {
+  // if delta>0, there are two possible values for x, assigned to x1 and x2  
+  if delta > 0 {
         let x1 = (-b + sqrt(delta)) / (2 * a)
-      //if delta=0, there is only one answer for x
         let x2 = (-b - sqrt(delta)) / (2 * a)
         print("The equation has two real roots: x = \(x1) or x = \(x2)")
     } 
-  //if delta>0, there are two possible answers for x
-  
+        //if delta=0, there is only one answer for x
     else if delta == 0 {
           let x = -b / (2 * a)
           print("The equation has one real root: x = \(x)")
       }
-  //if delta<0, there is no valid answer for x. Because (b^2-4ac)must be positive or 0 to get a square foot. 
+  //if delta<0, there is no valid answer for x. Because (b^2-4ac) cannot be less than 0 to get a square root. 
     else {
           print("The equation has no real roots")}
   //ask user whether to do another calculation.If user input is anything but N or n, do another calcuation. If user input is N or n, ends program.
