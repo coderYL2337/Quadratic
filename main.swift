@@ -2,6 +2,7 @@
 //Filename: Quadratic.swift
 //ax2 + bx + c = 0. This program gets user input of a, b and c, do the calculation and output value of x.
 import Foundation
+import Glibc
 print("Authored by: Yan Lu")
 print("")
 //inform user of how the quadratic formula goes
